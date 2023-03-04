@@ -44,9 +44,9 @@ function WeatherData() {
   return (
     <div className="main-container">
       <div className="weather-container">
-      <h2>Weather Report</h2>
+      <h1>Weather Report</h1>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="city">Enter City:
+          <label htmlFor="city">Enter City Name:
           <input
             type="text"
             id="city"
@@ -57,7 +57,7 @@ function WeatherData() {
           </label>
           <button type="submit">Get Weather</button>
         </form>
-        <p>Weather Description</p>
+        <h2>Weather Description</h2>
         {weatherData && (
           <div className="weather-description">{weatherData}</div>
         )}
