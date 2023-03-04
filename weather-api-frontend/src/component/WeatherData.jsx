@@ -36,6 +36,11 @@ function WeatherData() {
     }
   };
 
+  const handleChange = (e) => {
+    setCity(e.target.value);
+    setWeatherData(null);
+  };
+
   return (
     <div className="main-container">
       <div className="weather-container">
@@ -47,7 +52,7 @@ function WeatherData() {
             id="city"
             value={city}
             required
-            onChange={(e) => setCity(e.target.value)}
+            onChange={handleChange}
           />
           </label>
           <button type="submit">Get Weather</button>
